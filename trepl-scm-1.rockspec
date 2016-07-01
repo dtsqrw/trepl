@@ -28,7 +28,9 @@ build = {
       ['trepl.colorize'] = 'colorize.lua',
       ['readline'] = {
          sources = {'readline.c'},
-         libraries = {'readline'}
+         libraries = {'readline'},
+         incdirs = {'/usr/local/include'},
+         libdirs = {'/usr/local/lib'}
       },
       ['treplutils'] = {
          sources = {'utils.c'},
