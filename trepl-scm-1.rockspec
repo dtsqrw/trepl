@@ -28,9 +28,7 @@ build = {
       ['trepl.colorize'] = 'colorize.lua',
       ['readline'] = {
          sources = {'readline.c'},
-         libraries = {'readline'},
-         incdirs = {"/usr/local/include"},
-         libdirs = {"/usr/local/lib"}
+         libraries = {'readline'}
       },
       ['treplutils'] = {
          sources = {'utils.c'},
@@ -47,6 +45,16 @@ build = {
                libdirs = {"windows"},
                libraries = {'readline-win'}
 			}
+		 }
+	  },
+      unix = {
+	     modules = {
+		    ['readline'] = {
+               sources = {'readline.c'},
+               libraries = {'readline'},
+               incdirs = {"/usr/local/include"},
+               libdirs = {"/usr/local/lib"}
+            }
 		 }
 	  }
    },
